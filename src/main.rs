@@ -5,7 +5,7 @@ use std::env;
 use std::fs::{File, OpenOptions};
 use std::io::prelude::*;
 use std::process;
-use std::process::Command;
+use std::process::{Command, Stdio};
 extern crate clap;
 use clap::{App, Arg};
 
@@ -95,6 +95,7 @@ fn is_running(pid: i32) -> bool {
 #[warn(dead_code)]
 fn exec(command: &str) {
     Command::new("sh")
+        .stdout(Stdio::inherit())
         .arg("-c")
         .arg(command)
         .output()
