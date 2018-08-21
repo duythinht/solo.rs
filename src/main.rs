@@ -97,6 +97,6 @@ fn exec(command: &str) {
     Command::new("sh")
         .arg("-c")
         .arg(command)
-        .spawn()
+        .output()
         .expect("failed to execute process");
 }
