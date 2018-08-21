@@ -1,0 +1,8 @@
+[package]
+name = "solo"
+version = "0.1.0"
+authors = ["Thinh Tran <duythinht@gmail.com>"]
+
+[dependencies]
+libc = "0.2"
+clap = "2.32.0"
