@@ -92,7 +92,6 @@ fn is_running(pid: i32) -> bool {
     }
 }
 
-#[warn(dead_code)]
 fn exec(command: &str) {
     Command::new("sh")
         .stdin(Stdio::inherit())
