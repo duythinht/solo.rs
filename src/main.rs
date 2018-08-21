@@ -58,7 +58,8 @@ fn main() {
     {
         Ok(mut f) => {
             println!("Exec command...\n-------------------------------------------------");
-            if let Ok(_) = f.write(format!("{}", process::id()).as_bytes()) {}
+
+            if let Ok(_) = write!(f, "{}", process::id()) {}
 
             let cmd = part
                 .next()
