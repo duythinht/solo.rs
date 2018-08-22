@@ -67,7 +67,7 @@ fn main() {
                 .into_iter()
                 .map(|elm| {
                     if let Some(_) = elm.find(' ') {
-                        let mut s = "'".to_string();
+                        let mut s = String::from("'");
                         s.push_str(elm);
                         s.push_str("'");
                         s.to_string()
